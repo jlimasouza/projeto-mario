@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins';
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.cabecalho .logo {
+    width: 65px;
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+}
+
+.cabecalho nav li a:hover{
+    background-color: #d5011de0;
+}
+
+.container{
+    max-width: 1200px;
+    height:calc(100vh-132px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.container .imagem-titulo{
+    max-width: 500px;
+}
+
+.container .descricao {
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.container .botao-trailer{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #d5011de0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.container .botao-trailer:hover{
+    transform: scale(1.1);
+}
+
+.fundo-video{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video{
+    height: 100vh;
+}
+
+.fundo-video::after{
+    content:"";
+    background: linear-gradient(90deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0.6054796918767507) 51%, rgba(0,0,0,1) 94%);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal{
+    background-color: rgba(52, 52, 50, 0.749);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.conteudo-modal{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.fechar-modal{
+    background-color: #ffffff;
+    color: #f03a17; 
+    font-size: 20px;
+    font-weight: bold;
+    width: 35px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal iframe{
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto{
+    opacity: 1;
+    visibility: visible;
+}
